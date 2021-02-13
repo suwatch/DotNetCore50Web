@@ -7,4 +7,8 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @{
+        <p>NetCore: <b>@string.Join("\\", typeof(string).Assembly.Location.Split('\\').SkipLast(1))</b></p>
+        <p>AspNetCore: <b>@string.Join("\\", typeof(Microsoft.AspNetCore.Builder.IApplicationBuilder).Assembly.Location.Split('\\').SkipLast(1))</b></p>
+    }
 </div>
